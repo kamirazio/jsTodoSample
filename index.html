@@ -7,10 +7,16 @@
     <link rel="stylesheet" type="text/css" href="mystyle.css">
   </head>
   <body>
+    <!-- デザイナ -->
+    <!-- パーツリスト
+      -タイトル
+      -タスクを追加するボタン
+      -タスクのリスト
+    -->
     <div id="task_addbox" class="header">
       <h2>My To Do List</h2>
       <input type="text" id="task_input">
-      <input type="button" id="addBtn" value="ADD">
+      <input onclick="newTask()" type="button" id="addBtn" value="ADD">
     </div>
 
     <ul id="task_list">
