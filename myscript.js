@@ -7,7 +7,8 @@
 
     // 言葉を取得し新要素を生成する
     // --- inputに入力した言葉を取得する
-    var inputValue = document.getElementById("task_input").value;
+    var task_input = document.getElementById("task_input")
+    var inputValue = task_input.value;
     console.log(inputValue);
     var str = document.createTextNode(inputValue);
     // 要素の追加
@@ -16,6 +17,8 @@
     li.appendChild(str);
     // 全体に足す
     document.getElementById("task_list").appendChild(li);
+    task_input.value = "";
+    
   }
 
   //  --- 取得した言葉をタスク要素にする
