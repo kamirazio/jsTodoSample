@@ -1,5 +1,11 @@
 /* mystyle.css */
 
+/* おまじない */
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
 body{
   background: #DDD;
 }
@@ -11,8 +17,18 @@ body{
   *タスクリスト
 */
 
+#task_list li, #addBtn {
+  cursor: pointer;
+}
+
 /*
 おおまかなデザインをつくる
   -ヘッダ部 タスク追加
   -リスト部 タスクリスト
 */
+
+.header, input, .addBtn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
