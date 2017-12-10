@@ -4,15 +4,14 @@
 // おおまかな機能をつくる
   // イベントの作成
   function newTask(){
-    console.log("Hello JS TODO list !");
-
-    // --- inputに入力した言葉を取得する
-
-    // 要素の追加
-    // Create a new list item when clicking on the "Add" button
 
     // 言葉を取得し新要素を生成する
-    var str = document.createTextNode("new task");
+    // --- inputに入力した言葉を取得する
+    var inputValue = document.getElementById("task_input").value;
+    console.log(inputValue);
+    var str = document.createTextNode(inputValue);
+    // 要素の追加
+    // Create a new list item when clicking on the "Add" button
     var li = document.createElement("li");
     li.appendChild(str);
     // 全体に足す
