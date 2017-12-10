@@ -50,3 +50,21 @@ body{
 #addBtn:hover {
   background-color: #bbb;
 }
+
+/* -------- Style the list items  -------*/
+
+ul li {
+  padding: 10px;
+  list-style-type: none;
+  background: #eee;
+}
+
+/* しましま Task */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* マウスオン */
+ul li:hover {
+  background: #ddd;
+}
