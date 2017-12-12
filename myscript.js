@@ -18,7 +18,7 @@
     // 全体に足す
     document.getElementById("task_list").appendChild(li);
     task_input.value = "";
-    
+
   }
 
   //  --- 取得した言葉をタスク要素にする
@@ -27,3 +27,9 @@
 
   // 条件分岐
   // --- inputが空っぽなら注意する
+
+
+  // チェックのイベントを認識する
+  // チェックされた
+  // チェックが外れた
+  
