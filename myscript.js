@@ -28,8 +28,11 @@
   // 条件分岐
   // --- inputが空っぽなら注意する
 
-
+  // チェックのされるべき要素の認識
+  var myTasklist = document.getElementsByTagName("li");
+  for (var i = 0; i < myTasklist.length; i++) {
+     console.log(myTasklist[i]);
+  }
   // チェックのイベントを認識する
   // チェックされた
   // チェックが外れた
-  
