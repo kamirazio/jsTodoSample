@@ -10,21 +10,28 @@
     var task_input = document.getElementById("task_input")
     var inputValue = task_input.value;
     console.log(inputValue);
-    //  --- 取得した言葉をタスク要素にする
-    var str = document.createTextNode(inputValue);
-    //  --- タスクリストに要素を追加する
-    // Create a new list item when clicking on the "Add" button
-    var li = document.createElement("li");
-    li.appendChild(str);
-    // 全体に足す
-    document.getElementById("task_list").appendChild(li);
-    //  --- 入力したらinputを空にする
+
+    // 条件分岐
+    // --- inputが空っぽなら注意する
+    if (inputValue == '') {
+      alert("You must write something!");
+    } else {
+      //  --- 取得した言葉をタスク要素にする
+      var str = document.createTextNode(inputValue);
+      //  --- タスクリストに要素を追加する
+      // Create a new list item when clicking on the "Add" button
+      var li = document.createElement("li");
+      li.appendChild(str);
+      // 全体に足す
+      document.getElementById("task_list").appendChild(li);
+    }
+      //  --- 入力したらinputを空にする
     task_input.value = "";
 
   }
 
-  // 条件分岐
-  // --- inputが空っぽなら注意する
+
+
 
   // チェックのされるべき要素の認識
   var myTasklist = document.getElementsByTagName("li");
