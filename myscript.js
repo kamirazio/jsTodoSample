@@ -24,6 +24,7 @@
       li.appendChild(str);
       // 全体に足す
       document.getElementById("task_list").appendChild(li);
+      addCheckFunc(li)
     }
       //  --- 入力したらinputを空にする
     task_input.value = "";
@@ -34,6 +35,8 @@
 
 
   // チェックのされるべき要素の認識
+  // ※ 新しいリストに対してチェックが認識されない問題
+
   var myTasklist = document.getElementsByTagName("li");
   for (var i = 0; i < myTasklist.length; i++) {
      console.log(myTasklist[i]);
@@ -43,4 +46,10 @@
        // チェックされた // チェックが外れた
        console.log(this);
      }
+  }
+
+  function addCheckFunc(elm){
+    elm.onclick = function(){
+      this.classList.toggle('checked');
+    }
   }
