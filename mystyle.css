@@ -83,3 +83,13 @@ ul li.checked::before {
   position: absolute;
   margin-left: -40px;
 }
+
+/* 閉じるボタン */
+.close {
+  float: right;
+}
+
+/* マウスオン */
+.close:hover {
+  color: white;
+}
