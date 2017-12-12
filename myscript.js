@@ -27,6 +27,7 @@
   // --- inputが空っぽなら注意する
 
   // チェックのされるべき要素の認識
+  // ※ 新しいリストに対してチェックが認識されない問題
   var myTasklist = document.getElementsByTagName("li");
   for (var i = 0; i < myTasklist.length; i++) {
      console.log(myTasklist[i]);
