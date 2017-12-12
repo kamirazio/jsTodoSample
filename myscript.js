@@ -24,7 +24,8 @@
       li.appendChild(str);
       // 全体に足す
       document.getElementById("task_list").appendChild(li);
-      addCheckFunc(li)
+      addCheckFunc(li);
+      addCloseBtn(myTasklist[i]);
     }
       //  --- 入力したらinputを空にする
     task_input.value = "";
@@ -42,10 +43,23 @@
      console.log(myTasklist[i]);
      // チェックのイベントを認識する
      addCheckFunc(myTasklist[i]);
+     addCloseBtn(myTasklist[i]);
   }
 
   function addCheckFunc(elm){
     elm.onclick = function(){
       this.classList.toggle('checked');
+    }
+  }
+
+  function addCloseBtn(elm){
+    var closeSign = document.createElement("span");
+    var txt = document.createTextNode("\u00D7");
+    closeSign.className = "close";
+    closeSign.appendChild(txt);
+    elm.appendChild(closeSign);
+
+    closeSign.onclick = function() {
+      elm.style.display = "none";
     }
   }
