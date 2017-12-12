@@ -41,11 +41,7 @@
   for (var i = 0; i < myTasklist.length; i++) {
      console.log(myTasklist[i]);
      // チェックのイベントを認識する
-     myTasklist[i].onclick = function(){
-       this.classList.toggle('checked');
-       // チェックされた // チェックが外れた
-       console.log(this);
-     }
+     addCheckFunc(myTasklist[i]);
   }
 
   function addCheckFunc(elm){
